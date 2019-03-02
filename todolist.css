@@ -1,0 +1,33 @@
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+.group-column{
+	width: 100%;
+	border:1px solid #dfeffe;
+	min-height: 500px;
+	background-color: #dfeffe;
+	border-radius: 5px;
+	padding: 15px 10px;
+}
+.tasks{
+	width: 25%;
+	border:1px solid #3b5998;
+	min-height: 100px;
+	border-radius: 5px;
+	padding: 15px 10px;
+	display: inline-block;
+	margin: 5px;
+}
+.task{
+	display: inline-block;
+	width: 100%;
+}
+h1{
+	width: 25%;
+	display: inline-block;
+}
+.new-task{
+	margin: 5px;
+}
