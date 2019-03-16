@@ -5,6 +5,16 @@ $(document).ready(function () {
   console.log('dddd')
   let tasksList = $('.tasks')
   let countTaskGroup = 0;
+  $(function(){
+        $.getJSON('tasks.json',function(data){
+            console.log('success');
+            $.each(data.task,function(i,task){
+                $('.group-column-header').append('<input>'+task.name+'</input>');
+            });
+        }).error(function(){
+            console.log('error');
+        });
+    });
   add.on('click', function () {
     if(name.val()){
       $(".group-column").append("<div class='tasks'><h1>"+name.val()+"</h1><input class='tasks-name'></input><button class='add-list'>ADD</input></div>");
@@ -49,7 +59,7 @@ $(document).ready(function () {
     if(listName.val()){
       let newTask = document.createElement("input");
       newTask.className = "new-task";
-      newTask.setAttribute("data-id",tasks.length)
+      newTask.setAttribute("data-id",tasks.length++)
         this.parentElement.append(newTask);
       } else{
         alert('Please insert task name')
